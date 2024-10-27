@@ -12,13 +12,26 @@
   </header>
   <main>
     <h2>Add Employee</h2>
+    <form class="salary-form" onSubmit="submitForm(event)"></form>
     <input id="firstName" data-testid="firstNameInput" type="text" placeholder="First Name"/>
     <input id="lastName" data-testid="lastNameInput" type="text" placeholder="Last Name"/>
-    <input id="id" data-testid="idInput" type="number" placeholder="Employee ID"/>
+    <input id="idNumber" data-testid="idNumberInput" type="number" placeholder="Employee ID"/>
     <input id="title" data-testid="titleInput" type="text" placeholder="Title"/>
     <input id="annualSalary" data-testid="annualSalaryInput" type="number" placeholder="Annual Salary"/>
-
+    <button onclick="submitForm()">SUBMIT</button>
     <h2>Employees</h2>
+
+    <table id="employees">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID Number</th>
+          <th>Title</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+    </table>
   </main>
   <footer>
     <p>Total Monthly</p>
