@@ -12,15 +12,28 @@ function submitForm(event) {
     let title= document.querySelector('#titleInput');
     let annualSalary= document.querySelector('#annualSalaryInput');
 
+    let employeeTable = document.querySelector('#employeeData');
 
-
-let totalSalary = 0;
-    let salarySum = totalSalary += annualSalary;
-    for (let i = 0; i < totalSalary.length; i++) {
-        totalSalary += annualSalary[i];
-    }
-    console.log(salarySum);
-
-    let monthlySalary = (salarySum / 12);
-    console.log (monthlySalary);
+    employeeTable.innerHTML += `
+    <tr>
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>${idNumber}</td>
+        <td>${title}</td>
+        <td>${annualSalary}</td>
+        <td><button onClick="removeData(event)">Delete</button></td>
+    </tr>`;
 }
+
+
+
+// let totalSalary = 0;
+
+//     let salarySum = totalSalary += annualSalary;
+//     for (let i = 0; i < totalSalary.length; i++) {
+//         totalSalary += annualSalary[i];
+//     }
+//     console.log(salarySum);
+
+//     let monthlySalary = (salarySum / 12);
+//     console.log (monthlySalary);

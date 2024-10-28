@@ -12,6 +12,7 @@
   </header>
   <main>
     <h2>Add Employee</h2>
+    <div id="contents"></div>
     <form class="salary-form" onSubmit="submitForm(event)"></form>
     <input id="firstName" data-testid="firstNameInput" type="text" placeholder="First Name"/>
     <input id="lastName" data-testid="lastNameInput" type="text" placeholder="Last Name"/>
@@ -31,6 +32,7 @@
           <th>Salary</th>
         </tr>
       </thead>
+      <tbody id="employeeData"></tbody>
     </table>
   </main>
   <footer>
