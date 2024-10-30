@@ -13,6 +13,7 @@ function submitForm(event) {
     let annualSalaryVal= document.querySelector('#annualSalary-input').value;
 
     let employeeTable = document.querySelector('#employeeData');
+    
 
     employeeTable.innerHTML += `
     <tr>
@@ -24,6 +25,26 @@ function submitForm(event) {
         <td><button onClick="removeData(event)">Delete</button></td>
     </tr>`;
 }
+    function removeData(event){
+        console.log ("delete function button");
+            console.log('test', event);
+            let thingThatWasClicked= event.target;
+            console.log("thing that was clicked", thingThatWasClicked);
+            thingThatWasClicked.parentElement.parentElement.remove();
+    }
+   // monthlyTable.innerHTML += 
+    //let annualSalary = 0;
+    function totalSalary(annualSalary)  {
+    for (let i = 0; i < annualSalary.length; i++) {
+        totalSalary += annualSalary[i];
+    }
+    console.log(totalSalary);
+   
+    let monthlySalary = (totalSalary/ 12);
+    //let monthlySalaryVal= document.querySelector('#monthlySalary-input').value;
+    //return monthlySalary;
+    console.log (monthlySalary);
+    }
 
 
 
