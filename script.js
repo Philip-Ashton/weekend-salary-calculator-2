@@ -3,23 +3,24 @@ console.log ('check check 1-2');
 function submitForm(event) {
     console.log('submitForm');
     // Stop the page from refreshing
+    event.preventDefault();
    
 
-    let firstName= document.querySelector('#firstNameInput').value;
-    let lastName= document.querySelector('#lastNameInput').value;
-    let idNumber= document.querySelector('#idNumberInput').value;
-    let title= document.querySelector('#titleInput').value;
-    let annualSalary= document.querySelector('#annualSalaryInput').value;
+    let firstNameVal= document.querySelector('#firstName-input').value;
+    let lastNameVal= document.querySelector('#lastName-input').value;
+    let idNumberVal= document.querySelector('#idNumber-input').value;
+    let titleVal= document.querySelector('#title-input').value;
+    let annualSalaryVal= document.querySelector('#annualSalary-input').value;
 
     let employeeTable = document.querySelector('#employeeData');
 
     employeeTable.innerHTML += `
     <tr>
-        <td>${firstName}</td>
-        <td>${lastName}</td>
-        <td>${idNumber}</td>
-        <td>${title}</td>
-        <td>${annualSalary}</td>
+        <td>${firstNameVal}</td>
+        <td>${lastNameVal}</td>
+        <td>${idNumberVal}</td>
+        <td>${titleVal}</td>
+        <td>${annualSalaryVal}</td>
         <td><button onClick="removeData(event)">Delete</button></td>
     </tr>`;
 }
