@@ -5,12 +5,11 @@ function submitForm(event) {
     // Stop the page from refreshing
    
 
-    let firstName= document.querySelector('#firstNameInput');
-    console.log(firstName);
-    let lastName= document.querySelector('#lastNameInput');
-    let idNumber= document.querySelector('#idNumberInput');
-    let title= document.querySelector('#titleInput');
-    let annualSalary= document.querySelector('#annualSalaryInput');
+    let firstName= document.querySelector('#firstNameInput').value;
+    let lastName= document.querySelector('#lastNameInput').value;
+    let idNumber= document.querySelector('#idNumberInput').value;
+    let title= document.querySelector('#titleInput').value;
+    let annualSalary= document.querySelector('#annualSalaryInput').value;
 
     let employeeTable = document.querySelector('#employeeData');
 
